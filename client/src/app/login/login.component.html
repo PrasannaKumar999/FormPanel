@@ -1,0 +1,29 @@
+<div class="login-container">
+  <mat-card class="login-card">
+    <h2 class="brand">SmartForm Portal</h2>
+
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Username</mat-label>
+        <input matInput formControlName="username" required />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" formControlName="password" required />
+      </mat-form-field>
+
+      <div class="button-group">
+        <button mat-flat-button color="primary" type="submit">Login</button>
+        <button
+          mat-stroked-button
+          color="warn"
+          type="button"
+          (click)="onClear()"
+        >
+          Clear
+        </button>
+      </div>
+    </form>
+  </mat-card>
+</div>
